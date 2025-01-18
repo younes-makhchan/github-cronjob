@@ -3,10 +3,10 @@ const path = require('path');
 const simpleGit = require('simple-git');
 
 module.exports = async function (context, myTimer) {
-    const token = ''; // your GitHub Access Token and better use the azure fnction env variable
+    const githubToken = ''; // your GitHub Access Token and better use the azure fnction env variable
     const githubUsername='' // your github username
     const timeStamp = new Date().toISOString();
-    const repoUrl = `https://${token}@github.com/${githubUsername}/auto-github-commit.git`;
+    const repoUrl = `https://${githubToken}@github.com/${githubUsername}/auto-github-commit.git`;
     const fileToUpdate = "update.txt";
     const localRepoPath = path.join("/home", "gits"); // Local repository path relative to function directory
 
